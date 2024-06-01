@@ -10,25 +10,6 @@ Public Class Form3
         Dim Email As String = TextBox4.Text.Trim()
         Dim Username As String = TextBox5.Text.Trim()
         Dim Password As String = TextBox6.Text.Trim()
-        If FirstName = "" Then
-            MessageBox.Show("First Name cannot be empty.")
-            Return
-        ElseIf LastName = "" Then
-            MessageBox.Show("Last Name cannot be empty.")
-            Return
-        ElseIf StudentNumber = "" Then
-            MessageBox.Show("Student Number cannot be empty.")
-            Return
-        ElseIf Username = "" Then
-            MessageBox.Show("Username cannot be empty.")
-            Return
-        ElseIf Password = "" Then
-            MessageBox.Show("Password cannot be empty.")
-            Return
-        ElseIf Email = "" Then
-            MessageBox.Show("Email cannot be empty.")
-            Return
-        End If
         If Password.Length <> 10 OrElse Not Password.Any(Function(c) Char.IsUpper(c)) OrElse Not Password.Any(Function(c) Char.IsLower(c)) OrElse Not Password.Any(Function(c) Char.IsNumber(c)) Then
             TextBox6.ForeColor = Color.Red
             MessageBox.Show("Password must be at least 10 characters long and contains uppercase, lowercase letters, and numbers.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error)
